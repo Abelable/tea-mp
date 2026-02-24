@@ -290,6 +290,7 @@ page {
   height: 126rpx;
   color: #6a6f75;
   font-size: 28rpx;
+  font-family: "Alibaba PuHuiTi", "Microsoft YaHei", sans-serif;
 }
 .menu-item.active {
   position: relative;

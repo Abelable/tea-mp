@@ -1,0 +1,18 @@
+<view class="tab-bar" style="padding-bottom: {{safeAreaInsetBottom}}px;">
+  <view class="tab" bindtap="switchTab" data-path="/pages/home/index">
+    <image class="icon" src="/images/tab-bar/home{{tabType === 'home' ? '_fill' : ''}}.png" />
+    <view class="text {{tabType === 'home' ? 'selected' : ''}}">首页</view>
+  </view>
+  <view class="tab" bindtap="switchTab" data-path="/pages/category/index">
+    <image class="icon" src="/images/tab-bar/category{{tabType === 'category' ? '_fill' : ''}}.png" />
+    <view class="text {{tabType === 'category' ? 'selected' : ''}}">分类</view>
+  </view>
+  <view class="tab" bindtap="switchTab" data-path="/pages/cart/index">
+    <image class="icon" src="/images/tab-bar/cart{{tabType === 'cart' ? '_fill' : ''}}.png" />
+    <view class="text {{tabType === 'cart' ? 'selected' : ''}}">购物车</view>
+  </view>
+  <view class="tab" bindtap="switchTab" data-path="/pages/mine/index">
+    <image class="icon" src="/images/tab-bar/mine{{tabType === 'mine' ? '_fill' : ''}}.png" />
+    <view class="text {{tabType === 'mine' ? 'selected' : ''}}">我的</view>
+  </view>
+</view>

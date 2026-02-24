@@ -1,0 +1,34 @@
+.tab-bar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 -1px 12px 0 rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.tab {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 8rpx 0;
+}
+.icon {
+  width: 58rpx;
+  height: 58rpx;
+}
+.text {
+  font-size: 18rpx;
+  color: #999;
+  line-height: 1;
+}
+.text.selected {
+  color: #7ca18f;
+  font-weight: 500;
+}

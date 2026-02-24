@@ -9,8 +9,6 @@
     "pages/home/subpages/goods-detail/subpages/real-images/index",
     "pages/home/subpages/order-check/index",
     "pages/category/index",
-    "pages/rural/index",
-    "pages/rural/subpages/gift/index",
     "pages/cart/index",
     "pages/mine/index",
     "pages/mine/subpages/setting/index",
@@ -52,38 +50,19 @@
     }
   ],
   "tabBar": {
-    "color": "#6A6F75",
-    "selectedColor": "#F5701D",
+   "custom": true,
     "list": [
       {
-        "pagePath": "pages/home/index",
-        "text": "首页",
-        "iconPath": "images/tab-bar/home.png",
-        "selectedIconPath": "images/tab-bar/home_fill.png"
+        "pagePath": "pages/home/index"
       },
       {
-        "pagePath": "pages/category/index",
-        "text": "分类",
-        "iconPath": "images/tab-bar/category.png",
-        "selectedIconPath": "images/tab-bar/category_fill.png"
+        "pagePath": "pages/category/index"
       },
       {
-        "pagePath": "pages/rural/index",
-        "text": "诚信乡村",
-        "iconPath": "images/tab-bar/rural.png",
-        "selectedIconPath": "images/tab-bar/rural_fill.png"
+        "pagePath": "pages/cart/index"
       },
       {
-        "pagePath": "pages/cart/index",
-        "text": "购物车",
-        "iconPath": "images/tab-bar/cart.png",
-        "selectedIconPath": "images/tab-bar/cart_fill.png"
-      },
-      {
-        "pagePath": "pages/mine/index",
-        "text": "我的",
-        "iconPath": "images/tab-bar/mine.png",
-        "selectedIconPath": "images/tab-bar/mine_fill.png"
+        "pagePath": "pages/mine/index"
       }
     ]
   },
