@@ -47,9 +47,9 @@
   border: 1px solid #F1F5F7;
 }
 .region-option.picked {
-  color: #F5701D;
+  color: var(--theme-color);
   background: #FFF3EC;
-  border: 1px solid #F5701D;
+  border: 1px solid var(--theme-color);
 }
 
 .modal-btns {

@@ -116,7 +116,7 @@
 }
 .desc {
   flex: 1;
-  color: #F5701D;
+  color: var(--theme-color);
   font-size: 24rpx;
 }
 .sales {

@@ -35,7 +35,7 @@
 }
 .package.selected {
   padding: 8rpx;
-  border: 3px solid #F5701D;
+  border: 3px solid var(--theme-color);
 }
 .package-goods {
   position: relative;
@@ -84,7 +84,7 @@
   height: 48rpx;
   color: #fff;
   font-size: 22rpx;
-  background: #F5701D;
+  background: var(--theme-color);
   border-radius: 24rpx;
 }
 .more-icon {
@@ -133,7 +133,7 @@
 }
 .navgation-btn {
   margin-left: 24rpx;
-  color: #F5701D;
+  color: var(--theme-color);
   font-size: 26rpx;
 }
 .navgation-btn-arrow {
@@ -175,7 +175,7 @@
 .countdown {
   margin-left: 6rpx;
   width: 92rpx;
-  color: #F5701D;
+  color: var(--theme-color);
 }
 
 .list {
@@ -213,11 +213,11 @@
   line-height: 54rpx;
   text-align: center;
   font-size: 26rpx;
-  color: #F5701D;
+  color: var(--theme-color);
   border-radius: 28rpx;
-  border: 1rpx solid #F5701D;
+  border: 1rpx solid var(--theme-color);
 }
 .btn.active {
   color: #fff;
-  background: #F5701D;
+  background: var(--theme-color);
 }

@@ -17,7 +17,7 @@
   height: 72rpx;
   background: #fff;
   border-radius: 36rpx;
-  border: 1px solid #F5701D;
+  border: 1px solid var(--theme-color);
 }
 .search-icon {
   margin-left: 20rpx;
@@ -51,7 +51,7 @@
   font-size: 26rpx;
   color: #fff;
   border-radius: 36rpx;
-  background: #F5701D;
+  background: var(--theme-color);
 }
 
 .history-keywords-wrap {

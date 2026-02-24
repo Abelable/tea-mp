@@ -35,7 +35,7 @@
 }
 .checkbox .wx-checkbox-input.wx-checkbox-input-checked {
   border: none;
-  background: #F5701D;
+  background: var(--theme-color);
 }
 .checkbox.danger .wx-checkbox-input.wx-checkbox-input-checked {
   background: #FD0B0A;
@@ -78,7 +78,7 @@
   color: #fff;
   font-size: 28rpx;
   border-radius: 30rpx;
-  background: #F5701D;
+  background: var(--theme-color);
 }
 
 .new-year-goods-list-wrap {

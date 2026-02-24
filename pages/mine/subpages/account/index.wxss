@@ -153,7 +153,7 @@
 .withdraw-rules-btn {
   display: flex;
   align-items: center;
-  color: #f5701d;
+  color: var(--theme-color);
   font-size: 24rpx;
 }
 .arrow {
@@ -210,9 +210,9 @@
   border: 1px solid transparent;
 }
 .date.selected {
-  color: #f5701d;
+  color: var(--theme-color);
   background: #fff3ec;
-  border: 1px solid #f5701d;
+  border: 1px solid var(--theme-color);
 }
 
 .daily-data-list {
@@ -322,7 +322,7 @@
   font-size: 22rpx;
 }
 .goods-commission {
-  color: #f5701d;
+  color: var(--theme-color);
   font-size: 24rpx;
 }
 

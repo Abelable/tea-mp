@@ -33,6 +33,6 @@
   height: 88rpx;
   color: #fff;
   font-size: 36rpx;
-  background: #F5701D;
+  background: var(--theme-color);
   border-radius: 44rpx;
 }

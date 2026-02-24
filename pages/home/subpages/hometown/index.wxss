@@ -85,9 +85,9 @@
   border: 1px solid #f5f6f8;
 }
 .regin-item.selected {
-  color: #F5701D;
+  color: var(--theme-color);
   background: #FFF3EC;
-  border: 1px solid #F5701D;
+  border: 1px solid var(--theme-color);
 }
 .all-menu {
   margin-left: 24rpx;

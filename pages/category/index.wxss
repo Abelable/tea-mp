@@ -103,7 +103,7 @@
   height: 40rpx;
   content: "";
   border-radius: 0 8rpx 8rpx 0;
-  background: #F5701D;
+  background: var(--theme-color);
 }
 .category-option.border-bottom {
   border-bottom-right-radius: 20rpx;
@@ -141,7 +141,7 @@
   font-weight: 300;
 }
 .sort-name.active {
-  color: #F5701D;
+  color: var(--theme-color);
   font-weight: 550;
 }
 .sort-type {

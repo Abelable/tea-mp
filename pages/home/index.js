@@ -39,6 +39,12 @@ Component({
     posterModalVisible: false
   },
 
+  pageLifetimes: {
+    show() {
+      store.setTabType("home");
+    }
+  },
+
   methods: {
     onLoad(options) {
       // todo 用于前期提交审核隐藏部分功能，后期需要删除

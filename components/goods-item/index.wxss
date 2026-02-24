@@ -78,7 +78,7 @@
   flex: 1;
 }
 .introduce {
-  color: #F5701D;
+  color: var(--theme-color);
   font-size: 24rpx;
 }
 

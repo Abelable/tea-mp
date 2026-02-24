@@ -290,7 +290,7 @@ page {
   height: 126rpx;
   color: #6a6f75;
   font-size: 28rpx;
-  font-family: "Alibaba PuHuiTi", "Microsoft YaHei", sans-serif;
+  font-family: "PingFang SC", "Lantinghei SC", "Helvetica Neue", Helvetica, Arial, "Microsoft YaHei", "STHeitiSC-Light", simsun, "WenQuanYi Zen Hei", "WenQuanYi Micro Hei", "sans-serif";
 }
 .menu-item.active {
   position: relative;

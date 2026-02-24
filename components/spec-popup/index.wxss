@@ -25,7 +25,7 @@
   font-size: 24rpx;
 }
 .commission {
-  color: #F5701D;
+  color: var(--theme-color);
   font-size: 24rpx;
 }
 .spec-stock {
@@ -67,8 +67,8 @@
   background-color: #F6F6F6;
 }
 .spec-tips.selected {
-  color: #F5701D;
-  border: 1px solid #F5701D;
+  color: var(--theme-color);
+  border: 1px solid var(--theme-color);
   background-color: rgb(254, 244, 245);
 }
 

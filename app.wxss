@@ -2,8 +2,8 @@ page {
   position: relative;
   min-height: 100vh;
   background-color: #f5f6f8;
-  --theme-color: #F5701D;
-  --theme-color-btn-bg: linear-gradient( 90deg, #FFAC40 0%, #F5701D 100%);
+  --theme-color: #7ca18f;
+  --theme-color-btn-bg: linear-gradient(90deg, #FFAC40 0%, #F5701D 100%);
 }
 
 view, text, image, scroll-view, navigator, swiper, swiper-item {

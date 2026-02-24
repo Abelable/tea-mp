@@ -19,8 +19,8 @@
   margin: 38rpx auto 0;
   width: 344rpx;
   height: 94rpx;
-  color: #F5701D;
+  color: var(--theme-color);
   font-size: 36rpx;
-  border: 1px solid #F5701D;
+  border: 1px solid var(--theme-color);
   border-radius: 47rpx;
 }

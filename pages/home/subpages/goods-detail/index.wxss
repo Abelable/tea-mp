@@ -38,7 +38,7 @@
   width: 28px;
   height: 1.5px;
   content: '';
-  background-color: #F5701D;
+  background-color: var(--theme-color);
 }
 
 .banner-wrap {
@@ -164,11 +164,11 @@
   white-space: nowrap;
   color: #fff;
   font-size: 20rpx;
-  background: #F5701D;
+  background: var(--theme-color);
   border-radius: 16rpx 16rpx 16rpx 0px;
 }
 .bottom-price.activity {
-  color: #F5701D;
+  color: var(--theme-color);
   background: #fff;
 }
 .more-icon {
@@ -187,7 +187,7 @@
   width: fit-content;
   height: 36rpx;
   font-size: 22rpx;
-  background: #F5701D;
+  background: var(--theme-color);
   border-radius: 18rpx;
 }
 .commission-visible-icon {
@@ -301,7 +301,7 @@
 }
 .introduction {
   flex: 1;
-  color: #F5701D;
+  color: var(--theme-color);
   font-size: 24rpx;
 }
 .sale-volume {
@@ -388,7 +388,7 @@
   margin-bottom: 16rpx;
   padding: 0 8rpx;
   height: 40rpx;
-  color: #F5701D;
+  color: var(--theme-color);
   font-size: 24rpx;
   background: #FFF2EB;
   border-radius: 8rpx;

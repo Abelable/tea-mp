@@ -64,7 +64,7 @@
   border-radius: 0 16rpx 0 16rpx;
 }
 .identity-tag.promoter {
-  color: #f5701d;
+  color: var(--theme-color);
   background: #fff7e6;
 }
 .identity-tag.c1 {

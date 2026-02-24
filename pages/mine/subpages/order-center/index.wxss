@@ -51,7 +51,7 @@
 }
 .menu-item.selected {
   position: relative;
-  color: #F5701D;
+  color: var(--theme-color);
   font-size: 15px;
   font-weight: bold;
 }
@@ -64,7 +64,7 @@
   height: 3px;
   content: '';
   border-radius: 1.5px;
-  background: #F5701D;
+  background: var(--theme-color);
 }
 
 .content {

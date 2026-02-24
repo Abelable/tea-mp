@@ -162,9 +162,9 @@ page {
   border: 1px solid transparent;
 }
 .date.selected {
-  color: #F5701D;
+  color: var(--theme-color);
   background: #FFF3EC;
-  border: 1px solid #F5701D;
+  border: 1px solid var(--theme-color);
 }
 
 .daily-data-list {

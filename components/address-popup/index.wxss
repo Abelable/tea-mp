@@ -9,7 +9,7 @@
   font-weight: 550;
 }
 .add-btn {
-  color: #F5701D;
+  color: var(--theme-color);
   font-size: 28rpx;
 }
 
@@ -44,11 +44,11 @@
 .default-icon {
   margin-left: 24rpx;
   padding: 6rpx 8rpx;
-  color: #F5701D;
+  color: var(--theme-color);
   font-size: 20rpx;
   line-height: 1;
   border-radius: 8rpx;
-  border: 2rpx solid #F5701D;
+  border: 2rpx solid var(--theme-color);
 }
 .address-detail {
   margin-top: 16rpx;
@@ -64,5 +64,5 @@
   color: #fff;
   font-size: 28rpx;
   border-radius: 40rpx;
-  background: #F5701D;
+  background: var(--theme-color);
 }

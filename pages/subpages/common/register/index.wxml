@@ -9,6 +9,6 @@
   <view class="agreement">
     <checkbox class="checkbox" checked="{{agree}}" bindtap="toggleAgree" color="#F5701D" />
     <text>我已阅读并同意</text> 
-    <text style="color: #F5701D;" bindtap="serviceAgreement">《诚信星球用户服务协议》</text>
+    <text style="color: var(--theme-color);" bindtap="serviceAgreement">《诚信星球用户服务协议》</text>
   </view>
 </view>

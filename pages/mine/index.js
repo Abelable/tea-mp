@@ -40,6 +40,8 @@ Component({
 
   pageLifetimes: {
     show() {
+      store.setTabType("mine");
+
       this.init();
     }
   },

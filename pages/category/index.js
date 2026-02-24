@@ -23,6 +23,12 @@ Component({
     posterModalVisible: false
   },
 
+  pageLifetimes: {
+    show() {
+      store.setTabType("category");
+    }
+  },
+
   methods: {
     async onLoad() {
       await this.setCategoryOptions();

@@ -77,7 +77,7 @@
 }
 .introduce {
   margin-top: 5rpx;
-  color: #F5701D;
+  color: var(--theme-color);
   font-size: 22rpx;
 }
 

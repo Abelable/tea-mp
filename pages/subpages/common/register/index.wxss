@@ -39,7 +39,7 @@
 .login-btn {
   bottom: 372rpx;
   color: #fff;
-  background: #F5701D;
+  background: var(--theme-color);
 }
 .cancel-btn {
   bottom: 260rpx;

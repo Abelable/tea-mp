@@ -20,7 +20,7 @@
   font-weight: 500;
 }
 .order-status {
-  color: #F5701D;
+  color: var(--theme-color);
 }
 
 .list-content {
@@ -41,7 +41,7 @@
 }
 .countdown {
   margin-left: 12rpx;
-  color: #F5701D;
+  color: var(--theme-color);
   font-size: 22rpx;
 }
 
@@ -64,13 +64,13 @@
   line-height: 54rpx;
   text-align: center;
   font-size: 26rpx;
-  color: #F5701D;
+  color: var(--theme-color);
   border-radius: 28rpx;
-  border: 1rpx solid #F5701D;
+  border: 1rpx solid var(--theme-color);
 }
 .btn.active {
   color: #fff;
-  background: #F5701D;
+  background: var(--theme-color);
 }
 .btn:last-child {
   margin-right: 0;
