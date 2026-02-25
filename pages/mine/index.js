@@ -298,8 +298,8 @@ Component({
     onShareAppMessage() {
       const { id, nickname, signature } = store.promoterInfo || {};
       const title = nickname
-        ? `${nickname} ${signature || "让时间见证信任"}`
-        : "让时间见证信任";
+        ? `${nickname} ${signature || "一叶知千岛"}`
+        : "一叶知千岛";
       const path = id
         ? `/pages/home/index?superiorId=${id}`
         : "/pages/home/index";
@@ -312,7 +312,7 @@ Component({
     onShareAppMessage() {
       if (store.promoterInfo) {
         const { id, nickname, signature } = store.promoterInfo;
-        const title = `${nickname} ${signature || "让时间见证信任"}`;
+        const title = `${nickname} ${signature || "一叶知千岛"}`;
         const path = `/pages/home/index?superiorId=${id}`;
         const imageUrl =
           "https://static.chengxinxingqiu.cn/mp/home_share_cover.png";

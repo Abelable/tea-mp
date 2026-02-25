@@ -8,12 +8,12 @@
       <image class="avatar" src="{{promoterInfo.avatar}}" />
       <view class="nickname-wrap">
         <view class="nickname omit single">{{promoterInfo.nickname}}</view>
-        <view class="signature omit single">{{promoterInfo.signature || '让时间见证信任'}}</view>
+        <view class="signature omit single">{{promoterInfo.signature || '一叶知千岛'}}</view>
       </view>
     </view>
     <view class="search-bar" wx:if="{{!promoterInfo}}" bindtap="search">
       <image class="search-icon" src="/images/search.png" />
-      <text class="placeholder omit single">让时间见证信任</text>
+      <text class="placeholder omit single">一叶知千岛</text>
     </view>
     <view class="search-btn" wx:if="{{promoterInfo}}" bindtap="search">
       <image class="search-icon" src="/images/search.png" />
@@ -25,7 +25,8 @@
 </view>
 
 <view class="banner-wrap">
-  <swiper class="banner" wx:if="{{bannerList.length}}" bindchange="bannerChange" style="height: 530rpx;" autoplay circular interval="8000">
+  <image class="banner-bg {{curDot === index ? 'visible' : ''}}" wx:for="{{bannerList}}" wx:key="index" src="{{item.bg}}" />
+  <swiper class="banner" bindchange="bannerChange" autoplay circular interval="8000">
     <swiper-item 
       class="banner-item" 
       wx:for="{{bannerList}}"
@@ -34,15 +35,25 @@
       data-scene="{{item.scene}}"
       data-param="{{item.param}}"
     >
-      <image class="banner-img" mode="aspectFill" src="{{ item.cover }}" lazy-load />
+      <image class="banner-img" mode="aspectFill" src="{{ item.text }}" lazy-load />
     </swiper-item>
   </swiper>
-  <view class="banner-dots" wx:if="{{bannerList.length}}">
-    {{curDot}} / {{bannerList.length}}
+  <view class="banner-dots">
+    <view class="banner-dot" style="left: {{curDot * 120 / bannerList.length}}rpx; width: {{120 / bannerList.length}}rpx;" />
   </view>
 </view>
 
 <view class="container">
+  <view class="card"></view>
+
+  <view class="grid">
+    <view class="grid-left"></view>
+    <view class="grid-right">
+      <view class="grid-right-top"></view>
+      <view class="grid-right-bottom"></view>
+    </view>
+  </view>
+
   <view class="village-part">
     <image 
       class="village-illus" 

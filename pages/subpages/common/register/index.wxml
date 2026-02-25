@@ -1,7 +1,7 @@
 <view class="container">
   <view class="logo-wrap">
     <image class="logo" src="./images/logo.png" />
-    <view class="logo-desc">让时间见证信任  欢迎移民诚信星球</view>
+    <view class="logo-desc">一叶知千岛  欢迎移民诚信星球</view>
   </view>
   <button class="login-btn" wx:if="{{!agree}}" bindtap="toast" hover-class="none">立即登录</button>
   <button class="login-btn" wx:if="{{agree}}" bindgetphonenumber="getMobile" open-type="getPhoneNumber" hover-class="none">立即登录</button>

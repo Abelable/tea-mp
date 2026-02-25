@@ -83,7 +83,7 @@ Component({
           avatar || "https://static.chengxinxingqiu.cn/mp/logo.png"
         );
         this.setText(10, "#000", 195, 26, nickname || "诚信星球", "left");
-        this.setText(7, "#6A6F75", 195, 37, signature || "让时间见证信任");
+        this.setText(7, "#6A6F75", 195, 37, signature || "一叶知千岛");
       }
 
       await this.roundRect(86.5, 345, 100, 100, 50, qrcode);

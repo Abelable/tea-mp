@@ -21,10 +21,27 @@ Component({
     themeZoneList: [],
     menuList: [],
     curMenuIdx: 0,
-    bannerList: [],
+    bannerList: [
+      {
+        bg: "https://static.tiddler.cn/temp/f_bg.png",
+        text: "https://static.tiddler.cn/temp/f_text.png"
+      },
+      {
+        bg: "https://static.tiddler.cn/temp/s_bg.png",
+        text: "https://static.tiddler.cn/temp/s_text.png"
+      },
+      {
+        bg: "https://static.tiddler.cn/temp/qixi_bg.png",
+        text: "https://static.tiddler.cn/temp/qixi_text.png"
+      },
+      {
+        bg: "https://static.tiddler.cn/temp/c_bg.png",
+        text: "https://static.tiddler.cn/temp/c_text.png"
+      }
+    ],
     middleBannerList: [],
     liveList: [],
-    curDot: 1,
+    curDot: 0,
     activityGoodsLists: [[], [], []],
     hometownList: [
       { cover: "neimeng", name: "内蒙", desc: "辽阔草原风" },
@@ -73,7 +90,7 @@ Component({
 
     async init() {
       wx.showLoading({ title: "加载中..." });
-      await this.setBannerList();
+      // await this.setBannerList();
       await this.setThemeZoneList();
       await this.setMiddleBannerList();
       await this.setLiveList();
@@ -173,7 +190,7 @@ Component({
 
     bannerChange(event) {
       this.setData({
-        curDot: event.detail.current + 1
+        curDot: event.detail.current
       });
     },
 
@@ -325,8 +342,8 @@ Component({
     onShareAppMessage() {
       const { id, nickname, signature } = store.promoterInfo || {};
       const title = nickname
-        ? `${nickname} ${signature || "让时间见证信任"}`
-        : "让时间见证信任";
+        ? `${nickname} ${signature || "一叶知千岛"}`
+        : "一叶知千岛";
       const path = id
         ? `/pages/home/index?superiorId=${id}`
         : "/pages/home/index";
@@ -338,8 +355,8 @@ Component({
     onShareTimeline() {
       const { id, nickname, signature } = store.promoterInfo || {};
       const title = nickname
-        ? `${nickname} ${signature || "让时间见证信任"}`
-        : "让时间见证信任";
+        ? `${nickname} ${signature || "一叶知千岛"}`
+        : "一叶知千岛";
       const query = id ? `superiorId=${id}` : "";
       const imageUrl =
         "https://static.chengxinxingqiu.cn/mp/home_share_cover.png";
