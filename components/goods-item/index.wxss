@@ -3,7 +3,7 @@
   width: 350rpx;
   font-size: 0;
   background: #fff;
-  border-radius: 18rpx;
+  border-radius: 8rpx;
   overflow: hidden;
   opacity: 0;
 }
@@ -21,7 +21,7 @@
 .cover-wrap.is-gift {
   position: relative;
   padding: 6rpx;
-  border-radius: 18rpx;
+  border-radius: 8rpx;
   background: linear-gradient(139deg, rgba(249, 250, 216), rgba(211, 225, 155));
 }
 .cover {
@@ -125,6 +125,6 @@
 }
 
 .add-icon {
-  width: 40rpx;
-  height: 40rpx;
+  width: 48rpx;
+  height: 48rpx;
 }

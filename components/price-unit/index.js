@@ -15,7 +15,7 @@ Component({
     },
     color: {
       type: String,
-      value: "#ff5040",
+      value: "#000",
     },
     fontSize: {
       type: String,
@@ -36,7 +36,7 @@ Component({
     },
     unitColor: {
       type: String,
-      value: "#ff5040",
+      value: "#000",
     },
   },
 

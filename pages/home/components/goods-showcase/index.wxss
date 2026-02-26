@@ -1,0 +1,78 @@
+.goods-showcase {
+  margin-top: 20rpx;
+  background: #fff;
+  border-radius: 8rpx;
+  overflow: hidden;
+}
+.video-player {
+  width: 100%;
+}
+.goods-list {
+  margin-top: -80rpx;
+}
+.goods-swiper {
+  height: 320rpx;
+}
+.goods-item {
+  display: flex;
+  align-items: flex-end;
+  padding: 0 32rpx 32rpx;
+}
+.goods-img {
+  width: 280rpx;
+  height: 280rpx;
+}
+.goods-info {
+  margin-left: 36rpx;
+  flex: 1;
+}
+.goods-name {
+  color: #000;
+  font-size: 36rpx;
+  font-weight: 500;
+}
+.goods-desc {
+  margin-top: 8rpx;
+  color: #666;
+  font-size: 24rpx;
+}
+.price-wrap {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-top: 36rpx;
+}
+.price {
+  font-size: 36rpx;
+  font-weight: 500;
+}
+.price-unit {
+  font-size: 24rpx;
+  font-weight: normal;
+}
+.buy-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 36rpx;
+  height: 60rpx;
+  color: #fff;
+  font-size: 24rpx;
+  border-radius: 4rpx;
+  background: #000;
+}
+
+.swiper-dots {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32rpx;
+}
+.swiper-dot {
+  margin: 0 4rpx;
+  width: 60rpx;
+  height: 2rpx;
+  background: rgba(0, 0, 0, 0.3);
+}
+.swiper-dot.active {
+  background: #000;
+}

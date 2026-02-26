@@ -39,7 +39,7 @@
     </swiper-item>
   </swiper>
   <view class="banner-dots">
-    <view class="banner-dot" style="left: {{curDot * 120 / bannerList.length}}rpx; width: {{120 / bannerList.length}}rpx;" />
+    <view class="banner-dot" style="left: {{curDot * 160 / bannerList.length}}rpx; width: {{160 / bannerList.length}}rpx;" />
   </view>
 </view>
 
@@ -54,162 +54,21 @@
     </view>
   </view>
 
-  <view class="village-part">
-    <image 
-      class="village-illus" 
-      wx:for="{{ARRAY.slice(themeZoneList, 0, 4)}}" 
-      wx:key="index" 
-      src="{{item.cover}}" 
-      bindtap="checkThemeZone" 
-      data-scene="{{item.scene}}"
-      data-param="{{item.param || item.id}}"
-    />
+  <view class="title">
+    <image class="main-title" src="https://static.tiddler.cn/mp/tea/title_new.webp" />
+    <image class="sub-title" src="https://static.tiddler.cn/mp/tea/sub_title_new.webp" />
+  </view>
+  <goods-showcase />
+  <goods-showcase />
+
+  <view class="title">
+    <image class="main-title" src="https://static.tiddler.cn/mp/tea/title_hot.webp" />
+    <image class="sub-title hot" src="https://static.tiddler.cn/mp/tea/sub_title_hot.webp" />
   </view>
 
-  <view class="live-overview-wrap row between">
-    <!-- todo liveVisible 用于前期提交审核隐藏部分功能，后期需要删除 -->
-    <view class="live-overview" wx:if="{{liveList.length && liveVisible}}">
-      <view class="row between">
-        <view class="live-overview-title">诚信直播</view>
-        <view class="live-overview-more row" bindtap="checkMoreLive">
-          <view>全部直播</view>
-          <image class="more-icon" src="./images/arrow.png" />
-        </view>
-      </view>
-      <swiper class="live-list small-dots" autoplay circular indicator-dots="{{liveList.length > 1}}" indicator-color="rgba(255, 255, 255, 0.5)" indicator-active-color="rgba(255, 255, 255, 1)">
-        <swiper-item 
-          class="live-item" 
-          wx:for="{{liveList}}"
-          wx:key="index"
-          bindtap="linkToLive"
-          data-info="{{item}}"
-        >
-          <image class="live-cover" mode="aspectFill" src="{{ item.cover }}" lazy-load />
-          <view class="status-wrap row">
-            <view class="status row {{item.status === 1 ? 'live' : 'notice'}}">
-              <image class="live-icon" wx:if="{{item.status === 1}}" src="https://static.tiddler.cn/mp/live_status.gif" />
-              <view class="notice-spot" wx:if="{{item.status === 3}}" />
-              <text>{{item.status === 1 ? '直播' : '预告'}}</text>
-            </view>
-            <view class="status-desc">
-              {{item.status === 1 ? (NUM.over(item.views || 0, 100000) + '人观看') : TIME.transform(item.noticeTime, 'MM月DD日hh:mm开始')}}
-            </view>
-          </view>
-          <view class="live-info-wrap">
-            <view class="live-title omit">{{item.title}}</view>
-            <view class="live-info row">
-              <image class="anchor-avatar avatar-default" src="{{item.anchorInfo.avatar}}" lazy-load mode="aspectFill" />
-              <view class="anchor-name omit single">{{item.anchorInfo.nickname}}</view>
-              <view class="praise-info row" wx:if="{{item.status === 1}}">
-                <image class="live-praise-icon" src="/images/fire.png" />
-                <text>{{NUM.over(item.praiseNumber || 0, 100000)}}</text>
-              </view>
-              <button 
-                class="notice-btn" 
-                wx:if="{{item.status === 3 && item.anchorInfo.id !== userInfo.id}}" 
-                bindtap="subscribe" 
-                data-id="{{item.anchorInfo.id}}"
-              >
-                预约
-              </button>
-            </view>
-          </view>
-        </swiper-item>
-      </swiper>
-    </view>
-    <!-- todo liveVisible 用于前期提交审核隐藏部分功能，后期需要删除 -->
-    <view class="integrity-part {{(liveList.length && liveVisible) ? '' : 'row'}}">
-      <image 
-        class="integrity-illus" 
-        src="{{themeZoneList[4].cover}}" 
-        bindtap="checkThemeZone" 
-        data-scene="{{themeZoneList[4].scene}}"
-        data-param="{{themeZoneList[4].param || themeZoneList[4].id}}"
-      />
-      <image 
-        class="integrity-illus" 
-        style="margin-top: {{(liveList.length && liveVisible) ? 20 : 0}}rpx;margin-left: {{(liveList.length && liveVisible) ? 0 : 18}}rpx;" 
-        src="{{themeZoneList[5].cover}}"
-        bindtap="checkThemeZone" 
-        data-scene="{{themeZoneList[5].scene}}"
-        data-param="{{themeZoneList[5].param || themeZoneList[5].id}}"
-      />
-    </view>
-  </view>
-
-  <swiper 
-    class="middle-banner" 
-    wx:if="{{middleBannerList.length}}" 
-    style="height: 160rpx;" 
-    autoplay 
-    circular 
-    indicator-dots
-    indicator-color="rgba(66, 121, 112, 0.3)" 
-    indicator-active-color="#427970"
-  >
-    <swiper-item 
-      class="middle-banner-item"
-      wx:for="{{middleBannerList}}"
-      wx:key="index"
-      bindtap="linkTo"
-      data-scene="{{item.scene}}"
-      data-param="{{item.param}}"
-    >
-      <image class="middle-banner-img" mode="aspectFill" src="{{item.cover}}" lazy-load />
-    </swiper-item>
-  </swiper>
-
-  <view class="menu">
-    <view 
-      class="menu-item {{curMenuIdx === index ? 'active' : ''}}" 
-      wx:for="{{menuList}}" 
-      wx:key="index" 
-      bindtap="selectMenu" 
-      data-index="{{index}}"
-    >
-      <view class="menu-item-content">{{item.name}}</view>
-      <image class="menu-active-tag" wx:if="{{curMenuIdx === index}}" src="./images/menu-active.png" />
-    </view>
-  </view>
-
-  <view class="activity-goods-list">
-    <activity-goods-item wx:for="{{activityGoodsLists[curMenuIdx]}}" wx:key="id" item="{{item}}" bind:refresh="init" />
-  </view>
-  <empty-illus wx:if="{{!activityGoodsLists[curMenuIdx].length}}" desc="暂无活动商品" height="400rpx" />
-
-  <view class="hometown-wrap" bindtap="navToHometown">
-    <view class="more-btn row">
-      <view>更多地区</view>
-      <image class="more-arrow" src="/images/arrow.png" />
-    </view>
-    <view class="hometown-list row between">
-      <view 
-        class="hometown-item" 
-        wx:for="{{hometownList}}" 
-        wx:key="index"
-        catchtap="navToHometown"
-        data-name="{{item.name}}"
-      >
-        <view class="hometown-cover">
-          <image 
-            style="width: 128rpx;"
-            src="https://static.chengxinxingqiu.cn/mp/hometown/{{item.cover}}.png" 
-            mode="widthFix"
-          />
-        </view>
-        <view class="hometown-name">{{item.name}}</view>
-        <view class="hometown-desc">{{item.desc}}</view>
-      </view>
-    </view>
-  </view>
-
-  <view class="split-title row">
-    <view>星球精选</view>
-    <image class="praise-icon" src="./images/praise-icon.png" />
-  </view>
   <fall-flow list="{{goodsList}}" generic:item="goods-item" />
   <empty-illus wx:if="{{finished && !goodsList.length}}" desc="暂无商品" />
-  <view class="no-more-tips" wx:if="{{finished && goodsList.length}}">～没有更多了～</view>
+  <view class="no-more-tips" wx:if="{{finished && goodsList.length}}">- 没有更多了 -</view>
 </view>
 
 <ad-modal wx:if="{{adModalVisible}}" info="{{adInfo}}" bind:hide="hideAdModal" />

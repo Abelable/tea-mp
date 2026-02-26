@@ -2,6 +2,7 @@
   "navigationStyle": "custom",
   "enablePullDownRefresh": true,
   "usingComponents": {
+    "goods-showcase": "./components/goods-showcase/index",
     "fall-flow": "/components/fall-flow/index",
     "goods-item": "/components/goods-item/index",
     "empty-illus": "/components/empty-illus/index",

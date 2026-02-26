@@ -19,7 +19,7 @@ page {
 .promoter-info {
   display: flex;
   align-items: center;
-  margin-left: 24rpx;
+  margin-left: 20rpx;
   width: 350rpx;
 }
 .avatar {
@@ -42,7 +42,8 @@ page {
 }
 
 .nav-bar.show-bg {
-  background: #f5f6f8;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(8px);
 }
 .nav-bar.show-bg .nickname {
   color: #333;
@@ -60,7 +61,6 @@ page {
   height: 36px;
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(8px);
   border: 0.5px solid #e1e1e1;
 }
 .search-icon {
@@ -84,7 +84,6 @@ page {
   height: 34px;
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(8px);
   border: 0.5px solid #e1e1e1;
 }
 .search-icon,
@@ -129,9 +128,9 @@ page {
 
 .banner-dots {
   position: absolute;
-  right: 24rpx;
+  right: 20rpx;
   bottom: 250rpx;
-  width: 120rpx;
+  width: 160rpx;
   height: 2rpx;
   background: rgba(0, 0, 0, 0.3);
 }
@@ -145,6 +144,8 @@ page {
 .container {
   margin-top: 500rpx;
   padding: 20rpx;
+  padding-bottom: calc(100rpx + env(safe-area-inset-bottom));
+  width: 100%;
   background: linear-gradient(
     180deg,
     rgba(245, 245, 245, 0) 0%,
@@ -152,6 +153,25 @@ page {
     rgba(245, 245, 245, 1) 100%
   );
   z-index: 80;
+}
+
+.title {
+  display: flex;
+  align-items: flex-end;
+  margin: 40rpx 0;
+}
+.main-title {
+  width: 140rpx;
+  height: 42rpx;
+} 
+.sub-title {
+  margin-left: 20rpx;
+  margin-bottom: 8rpx;
+  width: 200rpx;
+  height: 20rpx;
+}
+.sub-title.hot {
+  width: 290rpx;
 }
 
 .card {
@@ -162,16 +182,16 @@ page {
 
 .grid {
   display: flex;
-  margin-top: 24rpx;
+  margin-top: 20rpx;
 }
 .grid-left {
   width: 300rpx;
-  height: 384rpx;
+  height: 380rpx;
   background: #fff;
   border-radius: 8rpx;
 }
 .grid-right {
-  margin-left: 24rpx;
+  margin-left: 20rpx;
   flex: 1;
 }
 .grid-right-top, .grid-right-bottom {
@@ -180,13 +200,13 @@ page {
   border-radius: 8rpx;
 }
 .grid-right-bottom {
-  margin-top: 24rpx;
+  margin-top: 20rpx;
 }
 
 .village-part {
   display: flex;
   justify-content: space-between;
-  margin-top: 24rpx;
+  margin-top: 20rpx;
 }
 .village-illus {
   width: 164rpx;
@@ -307,7 +327,7 @@ page {
 .live-praise-icon {
   margin-right: 4rpx;
   width: 26rpx;
-  height: 24rpx;
+  height: 20rpx;
 }
 .notice-btn {
   margin-left: 8rpx;
@@ -327,7 +347,7 @@ page {
 }
 
 .middle-banner {
-  margin-top: 24rpx;
+  margin-top: 20rpx;
 }
 .middle-banner-img {
   width: 100%;
@@ -367,7 +387,7 @@ page {
 }
 
 .hometown-wrap {
-  margin-bottom: 24rpx;
+  margin-bottom: 20rpx;
   padding-top: 114rpx;
   height: 610rpx;
   background-image: url('https://static.chengxinxingqiu.cn/mp/hometown/card_bg.png');
@@ -377,11 +397,11 @@ page {
 .more-btn {
   margin-left: 48rpx;
   color: #14191F;
-  font-size: 24rpx;
+  font-size: 20rpx;
 }
 .more-arrow {
-  width: 24rpx;
-  height: 24rpx;
+  width: 20rpx;
+  height: 20rpx;
 }
 
 .hometown-list {
@@ -432,6 +452,6 @@ page {
 .no-more-tips {
   margin-top: 36rpx;
   color: #999;
-  font-size: 24rpx;
+  font-size: 20rpx;
   text-align: center;
 }

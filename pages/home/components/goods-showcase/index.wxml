@@ -1,0 +1,41 @@
+<view class="goods-showcase">
+  <video
+    class="video-player"
+    src="https://static.tiddler.cn/temp/tea.mp4"
+    object-fit="cover"
+    muted
+    autoplay
+    loop
+    controls="{{false}}"
+    show-center-play-btn="{{false}}" 
+    show-fullscreen-btn="{{false}}"
+  />
+  <view class="goods-list">
+    <swiper class="goods-swiper" bindchange="goodsChange" autoplay circular interval="8000">
+      <swiper-item 
+        class="goods-item" 
+        wx:for="{{goodsList}}"
+        wx:key="index"
+        bindtap="linkTo"
+        data-scene="{{item.scene}}"
+        data-param="{{item.param}}"
+      >
+        <image class="goods-img" mode="aspectFill" src="{{ item.cover }}" lazy-load />
+        <view class="goods-info">
+          <view class="goods-name">下姜村老树红茶</view>
+          <view class="goods-desc">高山云雾茶 昼夜温差凝香</view>
+          <view class="price-wrap">
+            <view class="price">
+              <text class="price-unit">¥</text>
+              <text>128.9</text>
+            </view>
+            <view class="buy-btn">立即购买</view>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
+    <view class="swiper-dots" wx:if="{{goodsList.length > 1}}">
+      <view class="swiper-dot {{index === curDot ? 'active' : ''}}" wx:for="{{goodsList}}" wx:key="index" />
+    </view>
+  </view>
+</view>
