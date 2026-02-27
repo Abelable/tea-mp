@@ -6,7 +6,6 @@
     "fall-flow": "/components/fall-flow/index",
     "goods-item": "/components/goods-item/index",
     "empty-illus": "/components/empty-illus/index",
-    "poster-modal": "/components/poster-modal/index",
     "activity-goods-item": "/components/activity-goods-item/index",
     "ad-modal": "./components/ad-modal/index"
   }

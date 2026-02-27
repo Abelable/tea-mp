@@ -8,11 +8,7 @@
           <view class="signature omit single">{{promoterInfo.signature || '限时折扣 低至一折'}}</view>
         </view>
       </view>
-      <view class="search-bar" wx:if="{{!promoterInfo}}" bindtap="search">
-        <image class="search-icon" src="/images/search.png" />
-        <text class="placeholder omit single">一叶知千岛</text>
-      </view>
-      <view class="search-btn" wx:if="{{promoterInfo}}" bindtap="search">
+      <view class="search-btn" bindtap="search">
         <image class="search-icon" src="/images/search.png" />
       </view>
     </view>
