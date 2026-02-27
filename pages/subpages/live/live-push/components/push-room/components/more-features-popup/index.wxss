@@ -35,7 +35,7 @@
   background: #fff;
 }
 .icon-wrap.active {
-  background: var(--theme-color-btn-bg);
+  background: var(--theme-color);
 }
 .icon {
   width: 20px;

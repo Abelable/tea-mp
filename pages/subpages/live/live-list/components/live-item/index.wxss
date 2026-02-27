@@ -45,7 +45,7 @@
   border-radius: 18rpx;
 }
 .status.live {
-  background: var(--theme-color-btn-bg);
+  background: var(--theme-color);
 }
 .status.notice {
   background: linear-gradient(90deg, #40AFFF 0%, #2C75FC 100%);
@@ -116,5 +116,5 @@
   font-weight: bold;
   line-height: 1;
   border-radius: 8rpx;
-  background: var(--theme-color-btn-bg);
+  background: var(--theme-color);
 }

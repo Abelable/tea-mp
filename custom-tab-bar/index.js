@@ -26,6 +26,7 @@ Component({
 
   methods: {
     switchTab(e) {
+      wx.vibrateShort({ type: "heavy" });
       wx.switchTab({ url: e.currentTarget.dataset.path });
     }
   }

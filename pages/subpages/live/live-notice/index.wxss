@@ -105,7 +105,7 @@
   background: rgba(0, 0, 0, 0.1);
 }
 .start-btn {
-  background: var(--theme-color-btn-bg);
+  background: var(--theme-color);
 }
 .delete-btn {
   margin-top: 32rpx;

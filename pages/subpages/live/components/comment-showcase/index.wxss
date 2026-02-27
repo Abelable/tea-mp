@@ -48,7 +48,7 @@
 }
 .tag.anchor { 
   color: #fff;
-  background: var(--theme-color-btn-bg);
+  background: var(--theme-color);
 }
 .tag.assistant {
   color: #404A5C;

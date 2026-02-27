@@ -132,5 +132,5 @@
   color: #fff;
   font-size: 32rpx;
   border-radius: 44rpx;
-  background: var(--theme-color-btn-bg);
+  background: var(--theme-color);
 }

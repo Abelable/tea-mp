@@ -79,7 +79,7 @@
   height: 40rpx;
   color: #fff;
   font-size: 20rpx;
-  background: var(--theme-color-btn-bg);
+  background: var(--theme-color);
   border-radius: 25rpx;
 }
 
@@ -113,6 +113,6 @@
   background: rgba(0, 0, 0, 0.1);
 }
 .share-btn {
-  background: var(--theme-color-btn-bg);
+  background: var(--theme-color);
 }
 

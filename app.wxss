@@ -2,8 +2,11 @@ page {
   position: relative;
   min-height: 100vh;
   background-color: #f5f6f8;
-  --theme-color: #7ca18f;
-  --theme-color-btn-bg: linear-gradient(90deg, #FFAC40 0%, #F5701D 100%);
+  --theme-color: #000;
+  --theme-green: #7ca18f;
+  --theme-green-light: #89ad9a;
+  --theme-green-deep: #5f8772;
+  --theme-gold: #f1cc9b;
 }
 
 view, text, image, scroll-view, navigator, swiper, swiper-item {

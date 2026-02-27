@@ -134,7 +134,7 @@
   border-radius: 10px 0px 12px 0px;
 }
 .goods-index.is-hot {
-  background: var(--theme-color-btn-bg);
+  background: var(--theme-color);
 }
 
 .goods-info-wrap {
@@ -180,7 +180,7 @@
   width: 40px;
   height: 24px;
   border-radius: 12px;
-  background: var(--theme-color-btn-bg);
+  background: var(--theme-color);
 }
 .goods-pick-icon {
   width: 14px;

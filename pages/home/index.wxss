@@ -132,13 +132,13 @@ page {
   bottom: 250rpx;
   width: 160rpx;
   height: 2rpx;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.2);
 }
 .banner-dot {
   position: absolute;
   top: 0;
   height: 2rpx;
-  background: #000;
+  background: var(--theme-color);
 }
 
 .container {
@@ -270,7 +270,7 @@ page {
   border-radius: 16rpx;
 }
 .status.live {
-  background: var(--theme-color-btn-bg);
+  background: var(--theme-color);
 }
 .status.notice {
   background: linear-gradient(90deg, #40AFFF 0%, #2C75FC 100%);
@@ -336,7 +336,7 @@ page {
   color: #fff;
   font-size: 18rpx;
   border-radius: 8rpx;
-  background: var(--theme-color-btn-bg);
+  background: var(--theme-color);
 }
 
 .integrity-illus {
