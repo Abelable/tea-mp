@@ -1,50 +1,69 @@
-<view class="nav-bar" style="padding-top: {{statusBarHeight}}px;">
-  <view class="nav-bar-inner">
-    <view class="promoter-info" wx:if="{{promoterInfo}}" bindtap="checkPromoterInfo">
-      <image class="avatar" src="{{promoterInfo.avatar}}" />
-      <view class="nickname-wrap">
-        <view class="nickname omit single">{{promoterInfo.nickname}}</view>
-        <view class="signature omit single">{{promoterInfo.signature || '限时折扣 低至一折'}}</view>
+<view class="container">
+  <view class="header" style="padding-top: {{statusBarHeight}}px;">
+    <view class="header-inner">
+      <view class="promoter-info" wx:if="{{promoterInfo}}" bindtap="checkPromoterInfo">
+        <image class="avatar" src="{{promoterInfo.avatar}}" />
+        <view class="nickname-wrap">
+          <view class="nickname omit single">{{promoterInfo.nickname}}</view>
+          <view class="signature omit single">{{promoterInfo.signature || '限时折扣 低至一折'}}</view>
+        </view>
       </view>
-    </view>
-    <view class="search-bar" wx:if="{{!promoterInfo}}" bindtap="search">
-      <image class="search-icon" src="/images/search.png" />
-      <text class="placeholder omit single">一叶知千岛</text>
-    </view>
-    <view class="search-btn" wx:if="{{promoterInfo}}" bindtap="search">
-      <image class="search-icon" src="/images/search.png" />
-    </view>
-    <view class="share-btn" bindtap="share">
-      <image class="share-icon" src="/images/share.png" />
+      <view class="search-bar" wx:if="{{!promoterInfo}}" bindtap="search">
+        <image class="search-icon" src="/images/search.png" />
+        <text class="placeholder omit single">一叶知千岛</text>
+      </view>
+      <view class="search-btn" wx:if="{{promoterInfo}}" bindtap="search">
+        <image class="search-icon" src="/images/search.png" />
+      </view>
     </view>
   </view>
-</view>
 
-<view class="container" style="padding-top: {{statusBarHeight + 42}}px;">
-  <scroll-view class="category-options" scroll-y>
-    <view 
-      class="category-option row {{ curCategoryIdx === index ? 'active' : '' }} {{curCategoryIdx === index - 1 ? 'border-top' : ''}} {{curCategoryIdx === index + 1 ? 'border-bottom' : ''}}"
-      wx:for="{{categoryOptions}}" 
-      wx:key="index"
-      bindtap="selectCategory"
-      data-idx="{{index}}"
-    >
-      {{ item.name }}
+  <view class="banner-wrap">
+    <swiper class="banner" bindchange="bannerChange" autoplay circular interval="8000">
+      <swiper-item 
+        class="banner-item" 
+        wx:for="{{bannerList}}"
+        wx:key="index"
+        bindtap="linkTo"
+        data-scene="{{item.scene}}"
+        data-param="{{item.param}}"
+      >
+        <image class="banner-img" mode="aspectFill" src="{{ item.cover }}" lazy-load />
+      </swiper-item>
+    </swiper>
+    <view class="banner-dots" wx:if="{{bannerList.length > 1}}">
+      <view class="banner-dot {{index === curDot ? 'active' : ''}}" wx:for="{{bannerList}}" wx:key="index" />
     </view>
-  </scroll-view>
-  <view class="goods-list-wrap">
-    <view class="sort-menu">
-      <view class="sort-item" wx:for="{{goodsLists[curCategoryIdx].sortMenuList}}" wx:key="index" bindtap="selectSort" data-index="{{index}}">
-        <view class="sort-name {{goodsLists[curCategoryIdx].curSortIdx === index ? 'active' : ''}}">{{item.name}}</view>
-        <image class="sort-type" wx:if="{{item.order}}" src="./images/{{goodsLists[curCategoryIdx].curSortIdx === index ? item.order : 'unselected'}}.png" />
+  </view>
+  
+  <view class="main">
+    <scroll-view class="category-options-wrap" scroll-y>
+      <view class="category-options">
+        <view 
+          class="category-option row {{ curCategoryIdx === index ? 'active' : '' }}"
+          wx:for="{{categoryOptions}}" 
+          wx:key="index"
+          bindtap="selectCategory"
+          data-idx="{{index}}"
+        >
+          {{ item.name }}
+        </view>
       </view>
-    </view>
-    <scroll-view class="goods-list" bindscrolltolower="onReachBottom" scroll-y>
-      <goods-item wx:for="{{goodsLists[curCategoryIdx].list}}" wx:key="id" item="{{item}}" />
-      <empty-illus wx:if="{{goodsLists[curCategoryIdx].finished && !goodsLists[curCategoryIdx].list.length}}" desc="暂无该分类商品" />
-      <view class="no-more-tips" wx:if="{{goodsLists[curCategoryIdx].finished && goodsLists[curCategoryIdx].list.length}}">～没有更多了～</view>
     </scroll-view>
+    <view class="goods-wrap">
+      <view class="sort-menu">
+        <view class="sort-item" wx:for="{{goodsLists[curCategoryIdx].sortMenuList}}" wx:key="index" bindtap="selectSort" data-index="{{index}}">
+          <view class="sort-name {{goodsLists[curCategoryIdx].curSortIdx === index ? 'active' : ''}}">{{item.name}}</view>
+          <image class="sort-type" wx:if="{{item.order}}" src="./images/{{goodsLists[curCategoryIdx].curSortIdx === index ? item.order : 'unselected'}}.png" />
+        </view>
+      </view>
+      <scroll-view class="goods-list-wrap" bindscrolltolower="onReachBottom" scroll-y>
+        <view class="goods-list">
+          <goods-item wx:for="{{goodsLists[curCategoryIdx].list}}" wx:key="id" item="{{item}}" />
+          <empty-illus wx:if="{{goodsLists[curCategoryIdx].finished && !goodsLists[curCategoryIdx].list.length}}" desc="暂无该分类商品" />
+          <view class="no-more-tips" wx:if="{{goodsLists[curCategoryIdx].finished && goodsLists[curCategoryIdx].list.length}}">- 没有更多了 -</view>
+        </view>
+      </scroll-view>
+    </view>
   </view>
 </view>
-
-<poster-modal wx:if="{{posterModalVisible}}" info="{{posterInfo}}" bind:hide="hidePosterModal" />

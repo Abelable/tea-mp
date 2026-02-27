@@ -1,4 +1,4 @@
-<view class="tab-bar" style="padding-bottom: {{safeAreaInsetBottom}}px;">
+<view class="tab-bar">
   <view class="tab" bindtap="switchTab" data-path="/pages/home/index">
     <image class="icon" src="/images/tab-bar/home{{tabType === 'home' ? '_fill' : ''}}.png" />
     <view class="text {{tabType === 'home' ? 'selected' : ''}}">首页</view>

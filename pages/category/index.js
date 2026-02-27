@@ -15,7 +15,11 @@ Component({
 
   data: {
     statusBarHeight,
-    bannerList: [],
+    bannerList: [
+      { cover: "https://static.tiddler.cn/temp/banner_2.png" },
+      { cover: "https://static.tiddler.cn/temp/banner_1.png" }
+    ],
+    curDot: 0,
     categoryOptions: [],
     curCategoryIdx: 0,
     goodsLists: [],
@@ -41,8 +45,8 @@ Component({
         sortMenuList: [
           { name: "销量", value: "sales_volume", order: "desc" },
           { name: "价格", value: "price", order: "desc" },
-          { name: "好评", value: "avg_score", },
-          { name: "新品", value: "created_at", }
+          { name: "好评", value: "avg_score" },
+          { name: "新品", value: "created_at" }
         ],
         curSortIdx: 0,
         list: [],
@@ -81,7 +85,7 @@ Component({
 
     async setGoodsLists(init = false) {
       const { categoryOptions, curCategoryIdx, goodsLists } = this.data;
-      const { sortMenuList, curSortIdx } = goodsLists[curCategoryIdx]
+      const { sortMenuList, curSortIdx } = goodsLists[curCategoryIdx];
       const limit = 10;
       if (init) {
         this.pageList[curCategoryIdx] = 0;
@@ -93,7 +97,7 @@ Component({
         (await categoryService.getGoodsList({
           categoryId: categoryOptions[curCategoryIdx].id,
           sort: sortMenuList[curSortIdx].value,
-          order: sortMenuList[curSortIdx].order || 'desc',
+          order: sortMenuList[curSortIdx].order || "desc",
           page: ++this.pageList[curCategoryIdx],
           limit
         })) || [];
@@ -114,6 +118,12 @@ Component({
       if (!goodsLists[curCategoryIdx].finished) {
         this.setGoodsLists();
       }
+    },
+
+    bannerChange(event) {
+      this.setData({
+        curDot: event.detail.current
+      });
     },
 
     checkPromoterInfo() {
@@ -152,13 +162,13 @@ Component({
           : "-";
       const page = "pages/home/index";
       const qrcode = await categoryService.getQRCode(scene, page);
-  
+
       this.setData({
         posterModalVisible: true,
         posterInfo: { qrcode }
       });
     },
-  
+
     hidePosterModal() {
       this.setData({
         posterModalVisible: false

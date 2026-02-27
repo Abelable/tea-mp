@@ -2,7 +2,6 @@
   "navigationStyle": "custom",
   "usingComponents": {
     "empty-illus": "/components/empty-illus/index",
-    "goods-item": "./components/goods-item/index",
-    "poster-modal": "/components/poster-modal/index"
+    "goods-item": "./components/goods-item/index"
   }
 }

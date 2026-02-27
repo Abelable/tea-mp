@@ -78,13 +78,13 @@
   flex: 1;
 }
 .introduce {
-  color: var(--theme-color);
+  color: #666;
   font-size: 24rpx;
 }
 
 .goods-data {
   margin-top: 4rpx;
-  color: #666;
+  color: var(--theme-gold);
   font-size: 24rpx;
   font-weight: 300;
 }

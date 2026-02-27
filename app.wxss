@@ -6,7 +6,7 @@ page {
   --theme-green: #7ca18f;
   --theme-green-light: #89ad9a;
   --theme-green-deep: #5f8772;
-  --theme-gold: #f1cc9b;
+  --theme-gold: #ab8a58;
 }
 
 view, text, image, scroll-view, navigator, swiper, swiper-item {

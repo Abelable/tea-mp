@@ -1,8 +1,6 @@
 .goods-item {
-  margin-top: 32rpx;
+  margin-bottom: 32rpx;
   font-size: 0;
-  background: #fff;
-  border-radius: 18rpx;
   overflow: hidden;
   opacity: 0;
 }
@@ -16,7 +14,7 @@
   width: 168rpx;
   height: 168rpx;
   font-size: 0;
-  border-radius: 12rpx;
+  border-radius: 8rpx;
   overflow: hidden;
 }
 .cover-wrap.is-gift {
@@ -59,10 +57,9 @@
   display: flex;
   flex-direction: column;
   margin-left: 20rpx;
-  padding-bottom: 28rpx;
+  /* padding-bottom: 28rpx; */
   flex: 1;
-  min-height: 200rpx;
-  border-bottom: 1rpx solid #eee;
+  min-height: 172rpx;
 }
 
 .goods-title {
@@ -77,13 +74,13 @@
 }
 .introduce {
   margin-top: 5rpx;
-  color: var(--theme-color);
+  color: #666;
   font-size: 22rpx;
 }
 
 .goods-data {
   margin-top: 5rpx;
-  color: #666;
+  color: var(--theme-gold);
   font-size: 22rpx;
   font-weight: 300;
 }
@@ -124,6 +121,6 @@
 }
 
 .add-icon {
-  width: 36rpx;
-  height: 36rpx;
+  width: 44rpx;
+  height: 44rpx;
 }
