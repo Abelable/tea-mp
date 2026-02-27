@@ -96,7 +96,7 @@
 
   <image class="share-banner" wx:if="{{userInfo.level}}" bindtap="share" src="https://static.chengxinxingqiu.cn/mp/mine/shop_share_banner.png" mode="widthFix" />
 
-  <image class="integrity-school" bindtap="navToIntegritySchool" src="https://static.chengxinxingqiu.cn/mp/mine/integrity-school.png" mode="aspectFill" />
+  <image class="integrity-school" bindtap="navToIntegritySchool" src="https://static.tiddler.cn/temp/banner_2.png" mode="aspectFill" />
 
   <view class="order-center">
     <view class="title-wrap row">
