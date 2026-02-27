@@ -3,7 +3,6 @@
   width: 350rpx;
   font-size: 0;
   background: #fff;
-  border-radius: 8rpx;
   overflow: hidden;
   opacity: 0;
 }

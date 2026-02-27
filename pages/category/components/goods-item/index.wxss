@@ -14,7 +14,6 @@
   width: 168rpx;
   height: 168rpx;
   font-size: 0;
-  border-radius: 8rpx;
   overflow: hidden;
 }
 .cover-wrap.is-gift {
@@ -57,7 +56,6 @@
   display: flex;
   flex-direction: column;
   margin-left: 20rpx;
-  /* padding-bottom: 28rpx; */
   flex: 1;
   min-height: 172rpx;
 }

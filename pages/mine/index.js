@@ -25,9 +25,9 @@ Component({
     customerData: {},
     orderStatusList: [
       { en: "pay", zh: "待付款", total: 0 },
-      { en: "pack", zh: "待发货", total: 0 },
-      { en: "delivery", zh: "待收货/使用", total: 0 },
-      { en: "done", zh: "评价", total: 0 },
+      { en: "package", zh: "待发货", total: 0 },
+      { en: "ship", zh: "待收货", total: 0 },
+      { en: "comment", zh: "待评价", total: 0 },
       { en: "refund", zh: "售后", total: 0 }
     ],
     unreadNotificationCount: 0,

@@ -1,20 +1,13 @@
 <wxs module="NUM" src="/utils/filters/num.wxs" />
 
-<view 
-  class="nav-bar {{navBarBgVisible ? 'show-bg' : ''}} level-{{userInfo.level}}"
-  style="padding-top: {{statusBarHeight}}px;"
->
-  <view class="nav-bar-title">我的</view>
-</view>
-
-<view class="container level-{{userInfo.level || 0}}" style="padding-top: {{statusBarHeight + 60}}px;">
+<view class="container" style="padding-top: {{statusBarHeight + 56}}px;">
   <view class="user-info-wrap" wx:if="{{!userInfo}}" bindtap="register">
-    <image class="avatar" src="https://static.chengxinxingqiu.cn/mp/default_avatar.png" />
+    <image class="avatar" src="./images/default_avatar.png" />
     <view class="register-btn">点击登录</view>
   </view>
 
   <view class="user-info-wrap" wx:if="{{userInfo}}" bindtap="updateUserInfo">
-    <image class="avatar" src="{{userInfo.avatar || 'https://static.chengxinxingqiu.cn/mp/default_avatar.png'}}" />
+    <image class="avatar" src="{{userInfo.avatar || './images/default_avatar.png'}}" />
     <view class="user-info">
       <view class="user-name">{{userInfo.nickname}}</view>
       <view class="user-mobile">{{NUM.mobileFormat(userInfo.mobile)}}</view>
@@ -82,7 +75,7 @@
       <view class="title">我的客户</view>
       <view class="check-more-btn row" bindtap="navToCustomer" data-type="0">
         <text>查看全部</text>
-        <image class="more-icon" src="https://static.chengxinxingqiu.cn/mp/mine/arrow.png" />
+        <image class="more-icon" src="./images/arrow.png" />
       </view>
     </view>
     <view class="customer-data-list">
@@ -103,17 +96,16 @@
 
   <image class="share-banner" wx:if="{{userInfo.level}}" bindtap="share" src="https://static.chengxinxingqiu.cn/mp/mine/shop_share_banner.png" mode="widthFix" />
 
+  <image class="integrity-school" bindtap="navToIntegritySchool" src="https://static.chengxinxingqiu.cn/mp/mine/integrity-school.png" mode="aspectFill" />
+
   <view class="order-center">
-    <view class="title-wrap row between">
+    <view class="title-wrap row">
       <view class="title">我的订单</view>
-      <view class="check-more-btn row" bindtap="navToOrderCenter" data-status="0">
-        <text>查看全部</text>
-        <image class="more-icon" src="https://static.chengxinxingqiu.cn/mp/mine/arrow.png" />
-      </view>
+      <image class="arrow" src="./images/arrow.png" />
     </view>
-    <view class="order-btn-wrap row around">
+    <view class="order-btn-wrap row between">
       <view class="order-btn" wx:for="{{orderStatusList}}" wx:key="index" bindtap="navToOrderCenter" data-status="{{index + 1}}">
-        <image class="order-icon" src="https://static.chengxinxingqiu.cn/mp/mine/{{item.en}}.png" />
+        <image class="order-icon" src="./images/{{item.en}}.png" />
         <view class="order-desc">{{item.zh}}</view>
         <view class="count-stamp {{index === 2 ? 'nearby' : ''}}" wx:if="{{item.total}}">
           {{item.total > 99 ? '99+' : item.total}}
@@ -122,56 +114,46 @@
     </view>
   </view>
 
-  <image class="integrity-school" bindtap="navToIntegritySchool" src="https://static.chengxinxingqiu.cn/mp/mine/integrity-school.png" />
 
   <view class="tool-list">
     <view class="tool-item row" bindtap="navToNotification">
-      <image class="tool-icon" src="https://static.chengxinxingqiu.cn/mp/mine/message.png" />
       <view class="tool-desc">消息中心</view>
       <view class="notification-count" wx:if="{{unreadNotificationCount}}">
         {{unreadNotificationCount}}
       </view>
-      <image class="arrow" src="https://static.chengxinxingqiu.cn/mp/mine/arrow.png" />
+      <image class="arrow" src="./images/arrow.png" />
     </view>
     <view class="tool-item row" wx:if="{{liveVisible}}" bindtap="navToLive">
-      <image class="tool-icon" src="https://static.chengxinxingqiu.cn/mp/mine/live.png" />
       <view class="tool-desc">我的直播</view>
-      <image class="arrow" src="https://static.chengxinxingqiu.cn/mp/mine/arrow.png" />
+      <image class="arrow" src="./images/arrow.png" />
     </view>
     <view class="tool-item row" bindtap="navToAddress">
-      <image class="tool-icon" src="https://static.chengxinxingqiu.cn/mp/mine/address.png" />
       <view class="tool-desc">收货地址</view>
-      <image class="arrow" src="https://static.chengxinxingqiu.cn/mp/mine/arrow.png" />
+      <image class="arrow" src="./images/arrow.png" />
     </view>
     <view class="tool-item row" bindtap="navToCoupon">
-      <image class="tool-icon" src="https://static.chengxinxingqiu.cn/mp/mine/coupon.png" />
       <view class="tool-desc">我的礼券</view>
-      <image class="arrow" src="https://static.chengxinxingqiu.cn/mp/mine/arrow.png" />
+      <image class="arrow" src="./images/arrow.png" />
     </view>
     <view class="tool-item row" wx:if="{{userInfo.managerId}}" bindtap="verify">
-      <image class="tool-icon" src="https://static.chengxinxingqiu.cn/mp/mine/verify.png" />
       <view class="tool-desc">扫码核销</view>
-      <image class="arrow" src="https://static.chengxinxingqiu.cn/mp/mine/arrow.png" />
+      <image class="arrow" src="./images/arrow.png" />
     </view>
     <view class="tool-item row" wx:if="{{userInfo.level}}" bindtap="navToTeamData">
-      <image class="tool-icon" src="https://static.chengxinxingqiu.cn/mp/mine/rural.png" />
       <view class="tool-desc">乡村振兴</view>
-      <image class="arrow" src="https://static.chengxinxingqiu.cn/mp/mine/arrow.png" />
+      <image class="arrow" src="./images/arrow.png" />
     </view>
     <view class="tool-item row" wx:if="{{userInfo.level}}" bindtap="navToBalance">
-      <image class="tool-icon" src="https://static.chengxinxingqiu.cn/mp/mine/point.png" />
       <view class="tool-desc">我的积分</view>
-      <image class="arrow" src="https://static.chengxinxingqiu.cn/mp/mine/arrow.png" />
+      <image class="arrow" src="./images/arrow.png" />
     </view>
     <button class="tool-item" open-type="contact" session-from="sessionFrom" hover-class="none">
-      <image class="tool-icon" src="https://static.chengxinxingqiu.cn/mp/mine/cs.png" />
       <view class="tool-desc" style="text-align: left;">在线客服</view>
-      <image class="arrow" src="https://static.chengxinxingqiu.cn/mp/mine/arrow.png" />
+      <image class="arrow" src="./images/arrow.png" />
     </button>
     <view class="tool-item row" bindtap="navToSetting">
-      <image class="tool-icon" src="https://static.chengxinxingqiu.cn/mp/mine/account.png" />
       <view class="tool-desc">账户设置</view>
-      <image class="arrow" src="https://static.chengxinxingqiu.cn/mp/mine/arrow.png" />
+      <image class="arrow" src="./images/arrow.png" />
     </view>
   </view>
 </view>

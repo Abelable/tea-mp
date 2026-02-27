@@ -1,6 +1,5 @@
 {
   "navigationStyle": "custom",
-  "navigationBarTextStyle": "white",
   "enablePullDownRefresh": true,
   "usingComponents": {
     "empty-illus": "/components/empty-illus/index",

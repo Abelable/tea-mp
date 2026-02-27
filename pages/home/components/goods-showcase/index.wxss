@@ -1,7 +1,6 @@
 .goods-showcase {
   margin-top: 20rpx;
   background: #fff;
-  border-radius: 8rpx;
   overflow: hidden;
 }
 .video-player {
@@ -58,7 +57,6 @@
   height: 60rpx;
   color: #fff;
   font-size: 24rpx;
-  border-radius: 4rpx;
   background: #000;
 }
 
@@ -68,9 +66,9 @@
   margin-bottom: 32rpx;
 }
 .swiper-dot {
-  margin: 0 4rpx;
+  margin: 0 8rpx;
   width: 60rpx;
-  height: 2rpx;
+  height: 4rpx;
   background: rgba(0, 0, 0, 0.3);
 }
 .swiper-dot.active {

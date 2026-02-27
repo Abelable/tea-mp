@@ -2,59 +2,9 @@ page {
   background: #fff;
 }
 
-.nav-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 100;
-}
-.nav-bar.show-bg {
-  overflow: hidden;
-  background-position: top center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.nav-bar.show-bg.level-0, .nav-bar.show-bg.level-1 {
-  background-image: url("https://static.chengxinxingqiu.cn/mp/mine_bg_default.png");
-}
-.nav-bar.show-bg.level-2 {
-  background-image: url("https://static.chengxinxingqiu.cn/mp/mine_bg_level_2.png");
-}
-.nav-bar.show-bg.level-3 {
-  background-image: url("https://static.chengxinxingqiu.cn/mp/mine_bg_level_3.png");
-}
-.nav-bar.show-bg.level-4 {
-  background-image: url("https://static.chengxinxingqiu.cn/mp/mine_bg_level_4.png");
-}
-.nav-bar-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 44px;
-  color: #000;
-  font-size: 34rpx;
-  font-weight: 500;
-}
-
 .container {
   position: relative;
-  padding: 24rpx;
-  min-height: 100vh;
-  background-size: 100%;
-  background-repeat: no-repeat;
-}
-.container.level-0, .container.level-1 {
-  background-image: url("https://static.chengxinxingqiu.cn/mp/mine_bg_default.png");
-}
-.container.level-2 {
-  background-image: url("https://static.chengxinxingqiu.cn/mp/mine_bg_level_2.png");
-}
-.container.level-3 {
-  background-image: url("https://static.chengxinxingqiu.cn/mp/mine_bg_level_3.png");
-}
-.container.level-4 {
-  background-image: url("https://static.chengxinxingqiu.cn/mp/mine_bg_level_4.png");
+  padding: 32rpx;
 }
 
 .user-info-wrap {
@@ -62,8 +12,8 @@ page {
   align-items: center;
 }
 .avatar {
-  width: 120rpx;
-  height: 120rpx;
+  width: 88rpx;
+  height: 88rpx;
   border-radius: 50%;
 }
 .register-btn {
@@ -190,27 +140,23 @@ page {
 }
 
 .order-center {
-  margin-top: 24rpx;
-  padding: 24rpx;
-  border-radius: 16rpx;
-  background: #fff;
+  margin-top: 32rpx;
+  padding-bottom: 48rpx;
+  border-bottom: 0.5px solid #000;
 }
 .title {
   color: #111;
   font-size: 28rpx;
-  font-weight: 550;
+  font-weight: 500;
 }
-.check-more-btn {
-  color: #999;
-  font-size: 24rpx;
-}
-.more-icon {
-  margin-left: 5rpx;
-  width: 24rpx;
-  height: 24rpx;
+.arrow {
+  margin-left: 8rpx;
+  width: 18rpx;
+  height: 18rpx;
 }
 .order-btn-wrap {
-  margin-top: 32rpx;
+  margin-top: 40rpx;
+  padding: 0 24rpx;
 }
 .order-btn {
   position: relative;
@@ -274,32 +220,19 @@ page {
 .integrity-school {
   margin-top: 24rpx;
   width: 100%;
-  height: 182rpx;
+  height: 268rpx;
 }
 
 .tool-list {
-  margin-top: 24rpx;
-  padding: 0 24rpx;
-  border-radius: 16rpx;
-  background: #fff;
-  border: 1px solid #f5f6f8;
+  margin-top: 48rpx;
 }
 .tool-item {
-  height: 108rpx;
-  border-bottom: 1px solid #f5f6f8;
-}
-.tool-item:last-child {
-  border-bottom: none;
-}
-.tool-icon {
-  width: 52rpx;
-  height: 52rpx;
+  height: 100rpx;
 }
 .tool-desc {
-  margin: 0 16rpx;
   flex: 1;
-  color: #14191F;
-  font-size: 32rpx;
+  color: #000;
+  font-size: 28rpx;
 }
 .notification-count {
   min-width: 35rpx;
@@ -310,8 +243,4 @@ page {
   text-align: center;
   border-radius: 50%;
   background-color: red;
-}
-.arrow {
-  width: 32rpx;
-  height: 32rpx;
 }

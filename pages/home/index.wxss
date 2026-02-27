@@ -130,13 +130,13 @@ page {
   right: 20rpx;
   bottom: 250rpx;
   width: 160rpx;
-  height: 2rpx;
+  height: 4rpx;
   background: rgba(0, 0, 0, 0.2);
 }
 .banner-dot {
   position: absolute;
   top: 0;
-  height: 2rpx;
+  height: 4rpx;
   background: var(--theme-color);
 }
 
@@ -176,7 +176,6 @@ page {
 .card {
   height: 400rpx;
   background: #fff;
-  border-radius: 8rpx;
 }
 
 .grid {
@@ -187,7 +186,6 @@ page {
   width: 300rpx;
   height: 380rpx;
   background: #fff;
-  border-radius: 8rpx;
 }
 .grid-right {
   margin-left: 20rpx;
@@ -196,7 +194,6 @@ page {
 .grid-right-top, .grid-right-bottom {
   height: 180rpx;
   background: #fff;
-  border-radius: 8rpx;
 }
 .grid-right-bottom {
   margin-top: 20rpx;

@@ -83,19 +83,19 @@
 .banner-img {
   width: 100%;
   height: 100%;
-  border-radius: 8rpx;
 }
 .banner-dots {
   position: absolute;
-  right: 20rpx;
-  bottom: 20rpx;
+  left: 50%;
+  bottom: 16rpx;
+  transform: translateX(-50%);
   display: flex;
   justify-content: center;
 }
 .banner-dot {
-  margin: 0 4rpx;
-  width: 40rpx;
-  height: 2rpx;
+  margin: 0 6rpx;
+  width: 30rpx;
+  height: 4rpx;
   background: rgba(0, 0, 0, 0.3);
 }
 .banner-dot.active {
