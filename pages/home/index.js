@@ -23,16 +23,16 @@ Component({
     curMenuIdx: 0,
     bannerList: [
       {
+        bg: "https://static.tiddler.cn/temp/qixi_bg.png",
+        text: "https://static.tiddler.cn/temp/qixi_text.png"
+      },
+      {
         bg: "https://static.tiddler.cn/temp/f_bg.png",
         text: "https://static.tiddler.cn/temp/f_text.png"
       },
       {
         bg: "https://static.tiddler.cn/temp/s_bg.png",
         text: "https://static.tiddler.cn/temp/s_text.png"
-      },
-      {
-        bg: "https://static.tiddler.cn/temp/qixi_bg.png",
-        text: "https://static.tiddler.cn/temp/qixi_text.png"
       },
       {
         bg: "https://static.tiddler.cn/temp/c_bg.png",
