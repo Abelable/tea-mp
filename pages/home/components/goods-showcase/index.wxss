@@ -7,7 +7,7 @@
   width: 100%;
 }
 .goods-list {
-  margin-top: -80rpx;
+  margin-top: -88rpx;
 }
 .goods-swiper {
   height: 320rpx;
@@ -15,7 +15,7 @@
 .goods-item {
   display: flex;
   align-items: flex-end;
-  padding: 0 32rpx 32rpx;
+  padding: 0 32rpx 24rpx;
 }
 .goods-img {
   width: 280rpx;
@@ -39,7 +39,7 @@
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  margin-top: 36rpx;
+  margin-top: 32rpx;
 }
 .price {
   font-size: 36rpx;
@@ -63,7 +63,7 @@
 .swiper-dots {
   display: flex;
   justify-content: center;
-  margin-bottom: 32rpx;
+  margin-bottom: 24rpx;
 }
 .swiper-dot {
   margin: 0 8rpx;
